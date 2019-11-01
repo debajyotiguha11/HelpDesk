@@ -37,7 +37,7 @@ Follow these steps:
 - Commit your changes to the new branch.
 - Send a pull request.
 
-## Credit
+## Author
 ***[Debjyoti Guha](https://github.com/debajyotiguha11/)***
 
 ## Credit
