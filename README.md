@@ -3,7 +3,7 @@ Ticketing software for effortless customer support
 
 Helpdesk is a simple ticket system that allows customers to create new tickets that can be answered by certain members. Helpdesk has been developed using PHP not frameworks, thats why its not confusing and really easy to use.
 
-###Features:
+## Features:
 
 * Simple clean Design
 * Built with PHP and OOP, MySQL
