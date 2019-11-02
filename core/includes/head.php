@@ -13,6 +13,18 @@
   <link rel="icon" type="image/png" href="">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   <script src="<?php echo $website_url; ?>js/ajax.js"></script>
+  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script>
+$(document).ready(function(){
+setInterval(function(){
+$("#log").load(location.href + " #log");
+$("#update").load(location.href + " #update");
+$("#update1").load(location.href + " #update1");
+}, 1000);
+});
+
+</script>
 </head>
 <body>
 	

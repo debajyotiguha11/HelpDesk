@@ -10,8 +10,8 @@
 			<a href="../index1.php"><span class="entypo-left-open"></span>Dashboard</a>
 			<ul>
 				<li><b><h4><?php echo $users->getuserinfo('nick_name'); ?></h4></b></li>
-				<li>Registered <?php echo $time->ago($users->getuserinfo('sign_up_date')); ?></li>
-				<li>Last login <?php echo $time->ago($users->getuserinfo('last_login')); ?></li>
+				<div id="update"><li>Registered <?php echo $time->ago($users->getuserinfo('sign_up_date')); ?></li>
+				<li>Last login <?php echo $time->ago($users->getuserinfo('last_login')); ?></li></div>
 				<br>
 				<li><b><?php echo $tickets->my_tickets_info('open'); ?></b> Open Tickets</li>
 				<li><b><?php echo $tickets->my_tickets_info('resolved'); ?></b> Resolved Tickets</li>

@@ -94,14 +94,7 @@
  
 </div>
 
-<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-<script>
-$(document).ready(function(){
-setInterval(function(){
-$("#log").load(location.href + " #log");
-}, 1000);
-});
-</script>
+
 
 <?php 
 	}else{

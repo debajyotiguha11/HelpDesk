@@ -185,14 +185,6 @@
         </div>
     </div>
     
-    <script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
-<script>
-$(document).ready(function(){
-setInterval(function(){
-$("#update").load(location.href + " #update");
-}, 1000);
-});
-</script>
 
 <?php 
 	}

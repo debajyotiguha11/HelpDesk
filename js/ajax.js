@@ -87,6 +87,9 @@ $(document).ready(function() {
     
     $('#auth').submit(function(e) {
         e.preventDefault();
+        var sub = "HelpDesk Registration"
+        var email = $('#email').val();
+        var msg = "Successfully Created Your Account";
         if(document.getElementById("radio1").checked == true) {
             $.post('../core/process.php', {func: 'auth', email: $('#email').val(), password: $('#password').val(), type: 'returning_user'}, function(data) {
                 if(data == 'success') {
@@ -97,6 +100,7 @@ $(document).ready(function() {
                 }
             });
         } else if(document.getElementById("radio2").checked == true) {
+        	
             $.post('../core/process.php', {func: 'auth', email: $('#email').val(), password: $('#password').val(), type: 'new_user'}, function(data) {
               if(data == 'success') {
                   console.log(data);
@@ -105,6 +109,11 @@ $(document).ready(function() {
                   $('#alerts').html('<div class="alert">' + data + '</div>');
               }
             });
+            
+            $.post("../mailer.php", {sub1: sub, mail1: email, msg1: msg}, function(data) {
+                  	//alert(data);
+		});
+		
           }
         
     });
@@ -126,6 +135,7 @@ $(document).ready(function() {
                 $('#create_ticket_error').html(data);
              }
         });
+        
     });
     
     if(document.getElementById('allow_self_delete') && document.getElementById('allow_signin') && document.getElementById('allow_register')) {
