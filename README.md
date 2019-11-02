@@ -8,6 +8,7 @@ Helpdesk is a simple ticket system that allows customers to create new tickets t
 * Simple clean Design
 * Built with PHP and OOP, MySQL
 * AJAX Forms
+* PHPMailer
 * Some Pages
 * Easy to Integrate
 * Config to get you started
@@ -22,6 +23,8 @@ Helpdesk is a simple ticket system that allows customers to create new tickets t
 
 
 To setup open `config.php` in a code or text editor, update settings to suit your server then upload all files to server root or anywhere you want.
+
+To setup phpmailer open `mailer.php` in a code or text editor, update with email & password to suit your mail server(SMTP).
 
 * Compatible Browsers: IE9, IE10, IE11, Firefox, Safari, Opera, Chrome, Edge
 * Software Version: PHP 5.3, PHP 5.4, PHP 5.5, PHP 5.6, MySQL 4.x, MySQL 5.x
@@ -41,4 +44,5 @@ Follow these steps:
 ***[Debjyoti Guha](https://github.com/debajyotiguha11/)***
 
 ## Credit
+***[PHPMailer](https://github.com/PHPMailer/PHPMailer)***
 ***[Shameem Reza](https://github.com/shameemreza/)***
