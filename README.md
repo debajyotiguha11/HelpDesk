@@ -9,7 +9,6 @@ Helpdesk is a simple ticket system that allows customers to create new tickets t
 * Built with PHP and OOP, MySQL
 * AJAX Forms
 * PHPMailer
-* Some Pages
 * Easy to Integrate
 * Config to get you started
 * Admin Panel
