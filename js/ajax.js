@@ -2,8 +2,19 @@ $(document).ready(function() {
   
     $('#change_email').submit(function(e) {
         e.preventDefault();
+        var s = "HelpDesk: Mail Update";
+        var m = "Hello user,\nWe have updated your email to "+$('#cemail').val();
+        $.post("../mailer.php", {sub1: s, msg1: m}, function(data) {
+                       	//alert(data);
+	});
         $.post('../core/process.php', {func: 'change_email',email: $('#cemail').val()}, function(data) {
             $('#mailErr').html(data);
+            var s = "HelpDesk: Mail Update";
+            var m = "Hello user,\nWe have updated your email";
+            $.post("../mailer.php", {sub1: s, msg1: m}, function(data) {
+                  	//alert(data);
+		});
+            
         });
     });
     
@@ -11,6 +22,11 @@ $(document).ready(function() {
         e.preventDefault();
         $.post('../core/process.php', {func: 'change_password',new: $('#cnew').val(), current: $('#ccurrent').val()}, function(data) {
             $('#pwErr').html('<div class="alert">' + data + '</div>')
+            var s = "HelpDesk: Password Update";
+            var m = "Hello user,\nWe have updated your password\nOld password: "+$('#ccurrent').val()+"\nNew password: "+$('#cnew').val();
+            $.post("../mailer.php", {sub1: s, msg1: m}, function(data) {
+                  	//alert(data);
+		});
         });
     });
     
@@ -65,6 +81,11 @@ $(document).ready(function() {
         if(c) {
             $.post('../core/process.php', {func: 'delete_me'}, function(data) {
                 location.reload();
+                var s = "HelpDesk: Account Deactivation"
+                var m = "Hello user,\nAccount deactivation is successfull"
+                $.post("../mailer.php", {sub1: s, msg1: m}, function(data) {
+                  	alert(data);
+		});
             });
         } else {
           
@@ -87,8 +108,7 @@ $(document).ready(function() {
     
     $('#auth').submit(function(e) {
         e.preventDefault();
-        var sub = "HelpDesk Registration"
-        var email = $('#email').val();
+        var sub = "HelpDesk: Registration"
         var msg = "Successfully Created Your Account";
         if(document.getElementById("radio1").checked == true) {
             $.post('../core/process.php', {func: 'auth', email: $('#email').val(), password: $('#password').val(), type: 'returning_user'}, function(data) {
@@ -105,15 +125,14 @@ $(document).ready(function() {
               if(data == 'success') {
                   console.log(data);
                   location.reload();
+                  $.post("../mailer.php", {sub1: sub, msg1: msg}, function(data) {
+                  	//alert(data);
+		});
               } else {
                   $('#alerts').html('<div class="alert">' + data + '</div>');
               }
             });
             
-            $.post("../mailer.php", {sub1: sub, mail1: email, msg1: msg}, function(data) {
-                  	//alert(data);
-		});
-		
           }
         
     });
@@ -124,17 +143,27 @@ $(document).ready(function() {
         sub = document.getElementById('subject').value;
         dept = document.getElementById('department').value;
         msg = document.getElementById('message').value;
-        
+       
         $.post('core/process.php', {func: 'create_ticket', subject: sub, department: dept, message: msg}, function(data) {
              
-             var r = data.split(' ');
+             r = data.split(' ');
+             
              if(r[0] == 'success') {
+             	
                 location.href = '/helpdesk-master/ticket/?id=' + r[1];
+                var s = "HelpDest: Ticket Created"
+        	var m = "Ticket ID: "+r[1]+"\n"+"Subject: "+sub+"\n"+"Department: "+dept+"\n"+"Message: "+msg+"\n"+"Yor issue is being checked...\n Expect reply shortly by our executive.";
+        
+        	$.post("mailer.php", {sub1: s, msg1: m}, function(data) {
+                  	alert(data);
+		});
              } else {
              
                 $('#create_ticket_error').html(data);
              }
         });
+        
+        
         
     });
     
@@ -251,9 +280,15 @@ $(document).ready(function() {
     
     $('#no_longer_help').click(function(e) {
         e.preventDefault();
+        
         $.post('../core/process.php', {func: 'no_longer_help', ticket: $.urlParam('id')}, function(data) {
             if(data == 'success'){
                 location.reload();
+                var s = "HelpDesk: Ticket Resolved";
+        	var m = "Your Ticket: "+$.urlParam('id')+" has been marked Resolved!\nThank you for using our service";
+                $.post("../mailer.php", {sub1: s, msg1: m}, function(data) {
+                  	//alert(data);
+		});
             }
         });
     });

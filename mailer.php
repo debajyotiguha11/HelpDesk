@@ -9,10 +9,10 @@ require 'PHPMailer/src/SMTP.php';
 $mail = new PHPMailer(TRUE);
 
 
-$mail1 = $_POST['mail1'];
+$mail1 = $_COOKIE['email'];
 $subject1 = $_POST['sub1'];
 $body1 = $_POST['msg1'];
-$n = (explode("@",$mail1));
+$n = (explode("@",$_COOKIE['email']));
 $name1 = $n[0];
 
 try {

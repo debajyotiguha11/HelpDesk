@@ -5,6 +5,10 @@ class users extends db {
     public $email_err, $password_err;
     
     public function auth($email, $password, $type) {
+    
+    	$cookie_name = "email";
+	$cookie_value = $email;
+	setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
         
         $_link = $this->getDBH();
     
@@ -282,6 +286,10 @@ class users extends db {
         $_link = $this->getDBH();
 
     		if(filter_var($new, FILTER_VALIDATE_EMAIL)) {
+    		
+    		$cookie_name = "email";
+		$cookie_value = $new;
+		setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
     				  
     		    $query = $_link->prepare('UPDATE `users` SET `email` = :email WHERE `id` = :id');
             $query->bindParam(':email', $new, PDO::PARAM_STR);
