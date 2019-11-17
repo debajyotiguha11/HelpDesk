@@ -28,6 +28,23 @@ To setup phpmailer open `mailer.php` in a code or text editor, update with email
 * Compatible Browsers: IE9, IE10, IE11, Firefox, Safari, Opera, Chrome, Edge
 * Software Version: PHP 5.3, PHP 5.4, PHP 5.5, PHP 5.6, MySQL 4.x, MySQL 5.x
 
+## Screenshots
+<p align="center">
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img1.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img2.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img3.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img4.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img5.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img6.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img7.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img8.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img9.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img10.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img11.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img12.png" >
+  <img src="https://github.com/debajyotiguha11/HelpDesk/blob/master/images/img13.png" >
+</p>
+
 ## Contribute
 
 Want to work on the project? Any kind of contribution is welcome!
