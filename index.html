@@ -110,10 +110,10 @@
                         </div>
                     </td>
                     <td>
-                        <form>
-                            <input type="text" placeholder="name" required>
-                            <input type="email" placeholder="email" required><br>
-                            <textarea placeholder="your message" required rows="5"></textarea><br>
+                        <form action="mailto.php" method="POST">
+                            <input type="text" name="name" placeholder="name" required>
+                            <input type="email" name="email" placeholder="email" required><br>
+                            <textarea name="msg" placeholder="your message" required rows="5"></textarea><br>
                             <button class="btn_one">send</button>
                         </form> 
                     </td>
