@@ -23,7 +23,7 @@
             <tr>
                 <td id="logo">HelpDesk</td>
                 <td id="navigation">
-                    <a href="/helpdesk-master/index1.php">Sign in</a>
+                    <a href="index1.php">Sign in</a>
                     <a href="#bio">about</a>
                     <a href="#contact">contact</a>
                 </td>
