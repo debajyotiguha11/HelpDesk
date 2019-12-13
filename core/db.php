@@ -12,8 +12,8 @@ class db {
                                 array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
                 
                 //create database if it does not exist.
-                $DBH->query("CREATE DATABASE IF NOT EXISTS support");
-                $DBH->query("use support");
+                $DBH->query("CREATE DATABASE IF NOT EXISTS jKRhAnyNm9");
+                $DBH->query("use jKRhAnyNm9");
                 $DBH->query("CREATE TABLE IF NOT EXISTS `admin_settings` (
                                 `id` int(11) NOT NULL AUTO_INCREMENT,
                                 `self_delete_account` varchar(1) NOT NULL,

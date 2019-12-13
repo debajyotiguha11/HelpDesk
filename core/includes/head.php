@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title><?php echo $page_title; ?></title>
   <meta name="description" content="Support Ticket System.">
-  <meta name="author" content="Shameem Reza">
+  <meta name="author" content="Debjyoti Guha">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href='//fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
   <link href='//weloveiconfonts.com/api/?family=entypo' rel='stylesheet' type='text/css'>
